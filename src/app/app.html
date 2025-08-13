@@ -1,0 +1,91 @@
+<div>
+  <header class="header">
+    <h1 class="logo-placeholder">Owusu Buaheng</h1>
+    <svg
+      class="menu-btn"
+      id="menu-btn"
+      (click)="toggleMenu()"
+      xmlns="http://www.w3.org/2000/svg"
+      height="24px"
+      viewBox="0 -960 960 960"
+      width="24px"
+      fill="#102649"
+      role="button"
+      aria-label="Toggle navigation"
+      tabindex="0"
+    >
+      <path
+        d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
+      />
+    </svg>
+
+    <nav class="nav-bars" id="nav-bars">
+      <a href="#about" class="nav-bar">About</a>
+      <a href="#schedule" class="nav-bar">Countdown</a>
+      <a href="#speakers" class="nav-bar">Panelists</a>
+    </nav>
+  </header>
+
+  <nav class="nav-menu" id="nav-menu" *ngIf="isOpen">
+    <a href="#about" class="nav-link" (click)="toggleMenu()">About</a>
+    <a href="#schedule" class="nav-link" (click)="toggleMenu()">Countdown</a>
+    <a href="#speakers" class="nav-link" (click)="toggleMenu()">Panelists</a>
+  </nav>
+
+  <main>
+    <div class="main-body">
+      <h1><b>Welcome to Project Defence 2025</b></h1>
+      <p>The Ultimate Technology and Programming Conference</p>
+
+      <img
+        src="images/Edinburgh_logo.png"
+        alt="University of Edinburgh logo"
+        class="edin-logo"
+      />
+    </div>
+
+    <div class="shadow-cont" id="about">
+      <h2><b>About the Event</b></h2>
+      <p>
+        Faaz Tech Concert 2025 brings together leading minds in programming, tech and innovation
+      </p>
+    </div>
+
+    <div class="shadow-cont" id="schedule">
+      <h2>Countdown to Event</h2>
+      <div class="countdown-cont">
+        <img
+          src="images/countdown-clock.jpg"
+          alt="clock countdown"
+          class="countdown-img"
+        />
+        <div class="timer-cont">
+          <h3 class="countdown-text">Countdown</h3>
+          <p class="def-date">Defence Date: 28-08-2025</p>
+          <div class="countdown-timer" id="countdown-timer">
+            <p>Date: <span id="date">{{ todayDate }}</span></p>
+            <p>Time: <span id="time">{{ currentTime }}</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="shadow-cont" id="speakers">
+      <h2><b>Meet the Panelists</b></h2>
+      <h3>Supervisor for MSc Dissertation</h3>
+      <ul>
+        <li class="info">Andreas Steyven</li>
+        <li class="info">Email: A.Steyven&#64;napier.ac.uk</li>
+      </ul>
+      <h3>Internal Examiner</h3>
+      <ul>
+        <li class="info">Simon Wells</li>
+        <li class="info">Email: S.Wells&#64;napier.ac.uk</li>
+      </ul>
+    </div>
+  </main>
+
+  <footer>
+    Owusu Buaheng | Copyright &copy; 2025
+  </footer>
+</div>
